@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>powerKits | Studio Retention Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="brand-mark">pk</div>
+          <div>
+            <p class="eyebrow">FitLabel Studio</p>
+            <h1>powerKits</h1>
+          </div>
+        </div>
+
+        <nav>
+          <ul id="page-nav" class="nav-list"></ul>
+        </nav>
+
+        <section class="plan-card" aria-label="Current plan">
+          <h2>Current plan</h2>
+          <p><strong>Pro Max</strong> · Annual billing</p>
+          <p class="muted">You save 30% yearly.</p>
+          <button type="button">Manage billing</button>
+        </section>
+      </aside>
+
+      <main id="main-content" class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Welcome back, Studio Team</p>
+            <h2 id="active-page-title">Dashboard</h2>
+          </div>
+          <div class="topbar-actions">
+            <button type="button" class="ghost">Need help?</button>
+            <button type="button">Publish this week</button>
+          </div>
+        </header>
+
+        <section class="onboarding-banner" aria-label="Onboarding progress">
+          <div>
+            <h3>Guided onboarding</h3>
+            <p>
+              Complete the final setup steps to unlock your full retention kit and
+              launch your branded community ecosystem.
+            </p>
+          </div>
+          <ol>
+            <li class="done">Business profile</li>
+            <li class="done">Plan selected</li>
+            <li class="active">Connect Discord + WhatsApp</li>
+            <li>Publish first challenge</li>
+          </ol>
+        </section>
+
+        <section id="page-content" class="grid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <template id="card-template">
+      <article class="card">
+        <header>
+          <h3></h3>
+          <span class="tag"></span>
+        </header>
+        <p></p>
+        <ul></ul>
+        <button type="button">Open</button>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>

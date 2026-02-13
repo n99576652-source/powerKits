@@ -1,0 +1,263 @@
+:root {
+  --bg: #f9f8fc;
+  --surface: #ffffff;
+  --text: #222437;
+  --muted: #636983;
+  --primary: #f25f8b;
+  --primary-dark: #db3c71;
+  --secondary: #20b69b;
+  --secondary-soft: #e8f8f4;
+  --border: #e9e7f4;
+  --shadow: 0 12px 26px rgba(34, 36, 55, 0.08);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #ffe6ef 0, transparent 35%),
+    radial-gradient(circle at bottom left, #dffaf2 0, transparent 40%), var(--bg);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.brand {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(140deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.nav-list button {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-list button:hover,
+.nav-list button:focus-visible,
+.nav-list button.active {
+  background: var(--secondary-soft);
+  outline: none;
+}
+
+.plan-card {
+  margin-top: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem;
+  background: var(--surface);
+}
+
+.plan-card h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.main-content {
+  padding: 1.3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar h2 {
+  margin: 0.2rem 0 0;
+  font-size: 1.45rem;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 0.65rem 0.9rem;
+  background: linear-gradient(140deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.onboarding-banner {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.onboarding-banner h3 {
+  margin-top: 0;
+}
+
+.onboarding-banner ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.onboarding-banner li.active {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.onboarding-banner li.done {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.tag {
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  background: var(--secondary-soft);
+  color: #0f725e;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .onboarding-banner {
+    flex-direction: column;
+  }
+}
